@@ -1,0 +1,305 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="alreadyUpdatedText" xml:space="preserve">
+    <value>yt-dlp.exe Zaten Güncel.</value>
+  </data>
+  <data name="doformatselectionText" xml:space="preserve">
+    <value>Lütfen Format Seçimi Yapınız.</value>
+  </data>
+  <data name="downloadCompleteMessage" xml:space="preserve">
+    <value>İndirme işlemi başarıyla tamamlandı.</value>
+  </data>
+  <data name="downloadcompleteText" xml:space="preserve">
+    <value>İndirme Tamamlandı</value>
+  </data>
+  <data name="downloadError" xml:space="preserve">
+    <value>İndirme Hatası</value>
+  </data>
+  <data name="downloadLocationText" xml:space="preserve">
+    <value>İndirme Konumu:</value>
+  </data>
+  <data name="downloads" xml:space="preserve">
+    <value>İndirilenler</value>
+  </data>
+  <data name="downloadText" xml:space="preserve">
+    <value>İndir</value>
+  </data>
+  <data name="enteratleastone" xml:space="preserve">
+    <value>Lütfen en az bir değer girin</value>
+  </data>
+  <data name="entersongpodcasturl" xml:space="preserve">
+    <value>Lütfen şarkının/podcast'in ismini girin:</value>
+  </data>
+  <data name="enterTextMessage" xml:space="preserve">
+    <value>Lütfen şarkının/podcast'in ismini girin:</value>
+  </data>
+  <data name="enteryoutubelinkText" xml:space="preserve">
+    <value>Lütfen bir Youtube linki girin.</value>
+  </data>
+  <data name="episodenumber" xml:space="preserve">
+    <value>Bölüm Tamamlandı</value>
+  </data>
+  <data name="error" xml:space="preserve">
+    <value>Hata</value>
+  </data>
+  <data name="fileNaming" xml:space="preserve">
+    <value>Dosya İsimlendirme</value>
+  </data>
+  <data name="filenamingText" xml:space="preserve">
+    <value>Dosya İsimlendirme</value>
+  </data>
+  <data name="folderNotFoundText" xml:space="preserve">
+    <value>İndirme Klasörü Bulunumadı.</value>
+  </data>
+  <data name="howManyText" xml:space="preserve">
+    <value>Kaç Adet:</value>
+  </data>
+  <data name="inputcorrectint" xml:space="preserve">
+    <value>Geçerli bir sayı giriniz.</value>
+  </data>
+  <data name="moviecompleted" xml:space="preserve">
+    <value>.Film Tamamlandı</value>
+  </data>
+  <data name="moviename" xml:space="preserve">
+    <value>Film Adı:</value>
+  </data>
+  <data name="movieseriesaudioformat" xml:space="preserve">
+    <value>.Bölüm/Film Ses Dosyası Linki:</value>
+  </data>
+  <data name="movieserieskeyformat" xml:space="preserve">
+    <value>.Bölüm/Film Key:</value>
+  </data>
+  <data name="movieseriesvideoformat" xml:space="preserve">
+    <value>.Bölüm/Film Video Dosyası Linki:</value>
+  </data>
+  <data name="movieText" xml:space="preserve">
+    <value>Film</value>
+  </data>
+  <data name="movieyear" xml:space="preserve">
+    <value>Film Yılı:</value>
+  </data>
+  <data name="musicDownloadErrorText" xml:space="preserve">
+    <value>Şarkı indirme hatası</value>
+  </data>
+  <data name="noUpdate" xml:space="preserve">
+    <value>Güncelleme Yok</value>
+  </data>
+  <data name="openText" xml:space="preserve">
+    <value>Aç</value>
+  </data>
+  <data name="playlistText" xml:space="preserve">
+    <value>Oynatma Listesini İndir?</value>
+  </data>
+  <data name="pleasecheckapp" xml:space="preserve">
+    <value>Lütfen Uygulamayı Kontrol Edin.</value>
+  </data>
+  <data name="processCompleteText" xml:space="preserve">
+    <value>İşlem Tamamlandı</value>
+  </data>
+  <data name="richTextBox1.Text" xml:space="preserve">
+    <value>MediaHarbor, YouTube, Disney ve Spotify gibi çeşitli platformlardan medya içeriklerini indirmek ve düzenlemek için kullanılan basit ve kullanıcı dostu bir uygulamadır.
+
+1. İndirme Konumu Seçme:
+
+"Klasör Seç" düğmesine tıklayarak indirilen medya dosyalarının kaydedileceği klasörü seçin.
+Medya İndirme:
+
+2. YouTube:
+
+"Genel" sekmesine geçerek YouTube videolarını indirebilirsiniz.
+"YouTube URL" alanına video veya şarkının URL'sini yapıştırın.
+"İndir" düğmesine tıklayarak medyayı indirin.
+3. Disney:
+
+Disney+ içeriklerini indirmek için gerekli bilgileri girin.
+Dizi veya film indirmelerinde, her bölüm için ses, video ve anahtar (key) bilgilerini girebilirsiniz.
+Ses ve video dosyalarını birleştirerek nihai bir medya dosyası oluşturabilirsiniz.
+Spotify:
+
+4. Podcast veya müzik indirmek için kullanabilirsiniz (Kullanımı GitHub da var).
+İstenilen sayıda podcast veya müzik için gerekli bilgileri girin.
+İndirme işlemi tamamlandığında ses dosyalarını bulunan klasörde bulabilirsiniz.
+Otomatik Güncelleme (Opsiyonel):
+
+5. Genel Sekmesi Kullanım Notları:
+
+"Genel" sekmesi üzerinden YouTube, Vimeo, Dailymotion, Bilibili, CNN, ESPN, Flickr, Google Drive ve birçok diğer platformlardan medya içeriklerini indirebilir.</value>
+  </data>
+  <data name="saveLocationText" xml:space="preserve">
+    <value>İndirme Konumu</value>
+  </data>
+  <data name="selectDownloadLocationText" xml:space="preserve">
+    <value>Lütfen İlk Önce İndirme Konumunu Seçiniz!</value>
+  </data>
+  <data name="selectdownloadlocfirst" xml:space="preserve">
+    <value>Lütfen İlk Önce İndirme Konumu Seçiniz!</value>
+  </data>
+  <data name="selectFolderText" xml:space="preserve">
+    <value>Klasör Seç</value>
+  </data>
+  <data name="seriesname" xml:space="preserve">
+    <value>Dizi Adı:</value>
+  </data>
+  <data name="seriesseason" xml:space="preserve">
+    <value>Sezon No:</value>
+  </data>
+  <data name="seriesstartep" xml:space="preserve">
+    <value>Başlangıç Bölümü:</value>
+  </data>
+  <data name="seriesText" xml:space="preserve">
+    <value>Dizi</value>
+  </data>
+  <data name="shutdownPCText" xml:space="preserve">
+    <value>İşlem Sonunda Bilgisayar Kapatılsın Mı?</value>
+  </data>
+  <data name="shuttingdownText" xml:space="preserve">
+    <value>Bilgisayar Kapatılıyor</value>
+  </data>
+  <data name="song" xml:space="preserve">
+    <value>şarkı</value>
+  </data>
+  <data name="songkey" xml:space="preserve">
+    <value>Şarkı / Podcast Key</value>
+  </data>
+  <data name="songurl" xml:space="preserve">
+    <value>Şarkı / Podcast URL:</value>
+  </data>
+  <data name="startText" xml:space="preserve">
+    <value>Başlat</value>
+  </data>
+  <data name="updateCompleted" xml:space="preserve">
+    <value>Güncelleme Tamamlandı</value>
+  </data>
+  <data name="updateCompletedMessage" xml:space="preserve">
+    <value>Güncelleme Tamamlandı Artık Kullanabilirsiniz.</value>
+  </data>
+  <data name="updateError" xml:space="preserve">
+    <value>Güncelleme Hatası</value>
+  </data>
+  <data name="updatingPleaseWait" xml:space="preserve">
+    <value>Güncelleme Yapılıyor Lütfen Bekleyiniz!</value>
+  </data>
+  <data name="ytdlpAutoUpdateText" xml:space="preserve">
+    <value>yt-dlp otomatik güncellensin mi?</value>
+  </data>
+  <data name="ytdlpUpdate" xml:space="preserve">
+    <value>yt-dlp.exe Güncellemesi</value>
+  </data>
+</root>
