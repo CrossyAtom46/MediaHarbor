@@ -1,6 +1,7 @@
 # MediaHarbor (English/Türkçe)
 
-[English](#mediaharbor-english) | [Türkçe] (#mediaharbor-türkçe)
+[English](#mediaharbor-english) | 
+[Türkçe](#mediaharbor-türkçe)
 
 
 ## MediaHarbor (English)
