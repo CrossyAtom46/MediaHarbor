@@ -1,10 +1,9 @@
 # MediaHarbor (English/Türkçe)
 
-[English](#mediaharbor-english) | 
-[Türkçe](#mediaharbor-türkçe)
+[English](#mediaharbor-english) | [Türkçe] (#mediaharbor-türkçe)
 
 
-# MediaHarbor (English)
+## MediaHarbor (English)
 Mediaharbor is a media downloading application that provides a user-friendly interface for MediaHarbor, YT-DLP, and N_m3u8DL-CLI. This app is designed to facilitate the processes of downloading media content from various platforms.
 
 ## Features
@@ -51,7 +50,7 @@ Follow these steps to get video keys from platforms like Disney+. Please use the
 4. Paste the copied PSSH value into [getwvkeys.cc](https://getwvkeys.cc) to get the key.
 
 
-# MediaHarbor (Türkçe)
+## MediaHarbor (Türkçe)
 MediaHarbor, YT-DLP ve N_m3u8DL-CLI için kullanıcı dostu bir arayüz sağlayan bir medya indirme uygulamasıdır. Bu uygulama, çeşitli platformlardan medya içeriği indirme işlemlerini kolaylaştırmak için tasarlanmıştır.
 
 ## Özellikler
