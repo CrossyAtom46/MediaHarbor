@@ -1,3 +1,9 @@
+# MediaHarbor (English/Türkçe)
+
+[English](#mediaharbor-english) | 
+[Türkçe](#mediaharbor-türkçe)
+
+
 # MediaHarbor (English)
 Mediaharbor is a media downloading application that provides a user-friendly interface for MediaHarbor, YT-DLP, and N_m3u8DL-CLI. This app is designed to facilitate the processes of downloading media content from various platforms.
 
