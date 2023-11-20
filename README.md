@@ -12,7 +12,7 @@ Mediaharbor is a media downloading application that provides a user-friendly int
 - Adding mp4decrypt.exe to path.
 
 
-# Help: Getting Keys for Disney+ and Netflix Accounts
+# Help: Getting Keys for Disney+ Accounts
 
 ## Introduction
 
@@ -46,7 +46,7 @@ Follow these steps to get video keys from platforms like Disney+. Please use the
 
 
 # MediaHarbor (Türkçe)
-Mediaharbor, MediaHarbor, YT-DLP ve N_m3u8DL-CLI için kullanıcı dostu bir arayüz sağlayan bir medya indirme uygulamasıdır. Bu uygulama, çeşitli platformlardan medya içeriği indirme işlemlerini kolaylaştırmak için tasarlanmıştır.
+MediaHarbor, YT-DLP ve N_m3u8DL-CLI için kullanıcı dostu bir arayüz sağlayan bir medya indirme uygulamasıdır. Bu uygulama, çeşitli platformlardan medya içeriği indirme işlemlerini kolaylaştırmak için tasarlanmıştır.
 
 ## Özellikler
 
