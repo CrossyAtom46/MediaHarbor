@@ -53,7 +53,6 @@ namespace MediaHarbor
                             if (latest > current)
                             {
                                 // Yeni sürüm mevcut, bildirim göster.
-                                ShowNotificationUpdate(updateNotification, $"{newUpdateText} {latestVersion}");
                             }
                             else
                             {
