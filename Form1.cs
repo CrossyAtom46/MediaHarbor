@@ -15,6 +15,7 @@ using System.Threading;
 using WK.Libraries.BetterFolderBrowserNS;
 using System.Security.Principal;
 using MediaHarbor.Properties;
+using Newtonsoft.Json.Linq;
 
 namespace MediaHarbor
 {
@@ -24,20 +25,40 @@ namespace MediaHarbor
         public string downloadDir;
         public string downloadDir2;
         string userLanguage = CultureInfo.InstalledUICulture.Name;
+
         public Form1()
         {
-                InitializeComponent();
+            InitializeComponent();
+            richTextBox1.ReadOnly = true;
+            richTextBox2.ReadOnly = true;
+            richTextBox3.ReadOnly = true;
+            // richTextBox1 için renk değişimi
+            richTextBox1.ForeColor = Color.Black;
+            richTextBox1.BackColor = Color.White;
+
+            // richTextBox4 için renk değişimi
+            richTextBox4.ForeColor = Color.Black;
+            richTextBox4.BackColor = Color.White;
+            // richTextBox2 için renk değişimi
+            richTextBox2.ForeColor = Color.Black;
+            richTextBox2.BackColor = Color.White;
+
+            // richTextBox3 için renk değişimi
+            richTextBox3.ForeColor = Color.Black;
+            richTextBox3.BackColor = Color.White;
+
+
             notifyIcon2.BalloonTipClicked += NotifyIcon2_BalloonTipClicked;
             MetroFramework.Components.MetroStyleManager styleManager = new MetroFramework.Components.MetroStyleManager();
             styleManager.Owner = this;
-
-            // Default renk temasını purple olarak ayarla
             styleManager.Style = MetroFramework.MetroColorStyle.Purple;
             styleManager.Theme = MetroFramework.MetroThemeStyle.Default;
             LoadSettings();
             ChangeLanguage(userLanguage);
             disneyAdet.Location = new System.Drawing.Point(metroLabel2.Right, disneyAdet.Top);
             metroTextBox1.Location = new System.Drawing.Point(metroLabel3.Right, metroTextBox1.Top);
+            comboBox2.Items.AddRange(new object[] { "Light", "Dark" });
+            comboBox2.SelectedIndexChanged += ComboBox2_SelectedIndexChanged;
         }
         private string downloadLocationText, downloadText, folderNotFoundText, howManyText, movieText, playlistText, processCompleteText, saveLocationText, seriesText, shutdownPCText, startText, openText, error, selectFolderText, downloads, noUpdate;
         private string alreadyUpdatedText, ytdlpUpdate, updatingPleaseWait, updateError, updateCompleted, updateCompletedMessage, selectDownloadLocationText, inputCorrectint, movieseriesaudioformat, movieseriesvideoformat, movieserieskeyformat;
@@ -45,6 +66,13 @@ namespace MediaHarbor
         private string autoUpdateText;
         private bool isAdminMode = false;
 
+
+        private void ComboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // ComboBox'ın seçili öğesine göre tema ayarını değiştir
+            string selectedTheme = comboBox2.SelectedItem.ToString();
+            SetTheme(selectedTheme);
+        }
         private void metroCheckBox1_CheckedChanged(object sender, EventArgs e)
         {
             if (metroCheckBox1.Checked)
@@ -76,7 +104,7 @@ namespace MediaHarbor
             }
             else
             {
-                
+
             }
         }
 
@@ -95,12 +123,12 @@ namespace MediaHarbor
             GenericDownload();
             if (metroCheckBox1.Checked)
             {
-                MessageBox.Show("PCGG");
                 Process.Start("shutdown.exe", "/s /t 1");
             }
         }
 
         private string enteratleastone, selectdownloadlocfirst, musicDownloadErrorText, entersongpodcasturl, pleasecheckapp, songURL, song, songkey;
+        private string updateNotification, newUpdateText, noUpdateMessage, noUpdateText;
         private void ChangeLanguage(string cultureCode)
         {
             string currentCulture = CultureInfo.CurrentCulture.Name;
@@ -130,7 +158,7 @@ namespace MediaHarbor
                 seriesText = TurkishResources.SeriesText;
                 shutdownPCText = TurkishResources.ShutdownPCText;
                 startText = TurkishResources.StartText;
-                
+
                 howManyText = TurkishResources.HowManyText;
                 movieText = metroRadioButton1.Text;
                 seriesText = metroRadioButton2.Text;
@@ -181,6 +209,10 @@ namespace MediaHarbor
             }
             else if (currentCulture == "en-US")
             {
+                updateNotification = "Update Avilable";
+                newUpdateText = "New Version:";
+                noUpdateMessage = "No Update";
+                noUpdateText = "You're Using Lastest Version.";
                 metroTabPage2.Text = "Generic";
                 metroTabPage5.Text = "Help";
                 metroTabPage4.Text = "Settings";
@@ -260,7 +292,9 @@ namespace MediaHarbor
             }
             else
             {
-
+                metroTabPage2.Text = "Generic";
+                metroTabPage5.Text = "Help";
+                metroTabPage4.Text = "Settings";
                 songkey = EnglishResources.SongKey;
                 song = EnglishResources.Song;
                 songURL = EnglishResources.SongUrl;
@@ -288,7 +322,7 @@ namespace MediaHarbor
 
                 metroButton1.Text = startText;
                 howManyText = EnglishResources.HowManyText;
-                metroRadioButton1.Text ="Movie";
+                metroRadioButton1.Text = "Movie";
                 metroRadioButton2.Text = "Series";
                 downloadText = metroButton2.Text;
                 metroLabel1.Text = downloadLocationText;
@@ -336,7 +370,7 @@ namespace MediaHarbor
                 metroCheckBox2.Text = playlistText;
             }
 
-            
+
         }
 
         private void NotifyIcon2_BalloonTipClicked(object sender, EventArgs e)
@@ -353,7 +387,7 @@ namespace MediaHarbor
         }
 
         private void ShowNotification(string title, string content)
-        { 
+        {
             notifyIcon1.Icon = Icon;
             notifyIcon1.BalloonTipTitle = title;
             notifyIcon1.BalloonTipText = content;
@@ -362,7 +396,6 @@ namespace MediaHarbor
 
         private void ProcessNotification(string title2, string content2)
         {
-            notifyIcon2.Icon = Icon;
             notifyIcon2.BalloonTipTitle = title2;
             notifyIcon2.BalloonTipText = content2;
             notifyIcon2.ShowBalloonTip(3000);
@@ -413,7 +446,7 @@ namespace MediaHarbor
                 // Güncelleme işlemi başarıyla tamamlandıysa bildirimi göster
                 if (output.Contains("yt-dlp is up to date"))
                 {
-                   // ShowNotification($"{noUpdate}", $"{alreadyUpdatedText}");
+                    // ShowNotification($"{noUpdate}", $"{alreadyUpdatedText}");
                 }
                 else if (output.Contains("Updating to"))
                 {
@@ -436,6 +469,9 @@ namespace MediaHarbor
         }
         private async void Form1_Load(object sender, EventArgs e)
         {
+            metroTabControl1.SelectedTab = metroTabPage6;
+            string systemCulture = System.Globalization.CultureInfo.CurrentCulture.Name;
+            GitHubUpdater.CheckForUpdates(systemCulture);
             if (IsRunAsAdministrator())
             {
                 metroCheckBox1.Checked = true;
@@ -672,19 +708,19 @@ namespace MediaHarbor
             switch (selectedQuality)
             {
                 case "144p":
-                    return "best[height<=144]";
+                    return "144";
                 case "240p":
-                    return "best[height<=240]";
+                    return "240";
                 case "360p":
-                    return "best[height<=360]";
+                    return "360";
                 case "480p":
-                    return "best[height<=480]";
+                    return "480";
                 case "720p":
-                    return "best[height<=720]";
+                    return "720";
                 case "1080p":
-                    return "best[height<=1080]";
+                    return "1080";
                 case "1440p":
-                    return "best[height<=1440]";
+                    return "1440";
                 default:
                     return "best";
             }
@@ -762,6 +798,8 @@ namespace MediaHarbor
                     this.Invoke(new Action(() =>
                     {
                         richTextBox2.AppendText(e.Data + Environment.NewLine);
+                        richTextBox2.SelectionStart = richTextBox2.Text.Length;
+                        richTextBox2.ScrollToCaret();
                     }));
                 }
             };
@@ -795,7 +833,7 @@ namespace MediaHarbor
 
             Process process = new Process();
             process.StartInfo.FileName = ".\\yt-dlp.exe";
-            process.StartInfo.Arguments = $"--ffmpeg-location \"{ffmpegPath}\" -o \"{outputDir}\\%(title)s.%(ext)s\" --no-playlist --format {formatCode} {youtubeLink}";
+            process.StartInfo.Arguments = $"--ffmpeg-location \"{ffmpegPath}\" -o \"{outputDir}\\%(title)s.%(ext)s\" --no-playlist -S res:{formatCode} {youtubeLink}";
             process.StartInfo.UseShellExecute = false;
             process.StartInfo.RedirectStandardOutput = true;
             process.StartInfo.CreateNoWindow = true;
@@ -807,6 +845,8 @@ namespace MediaHarbor
                     this.Invoke(new Action(() =>
                     {
                         richTextBox2.AppendText(e.Data + Environment.NewLine);
+                        richTextBox2.SelectionStart = richTextBox2.Text.Length;
+                        richTextBox2.ScrollToCaret();
                     }));
                 }
             };
@@ -851,6 +891,8 @@ namespace MediaHarbor
                     this.Invoke(new Action(() =>
                     {
                         richTextBox2.AppendText(e.Data + Environment.NewLine);
+                        richTextBox2.SelectionStart = richTextBox2.Text.Length;
+                        richTextBox2.ScrollToCaret();
                     }));
                 }
             };
@@ -896,6 +938,8 @@ namespace MediaHarbor
                     this.Invoke(new Action(() =>
                     {
                         richTextBox2.AppendText(e.Data + Environment.NewLine);
+                        richTextBox2.SelectionStart = richTextBox2.Text.Length;
+                        richTextBox2.ScrollToCaret();
                     }));
                 }
             };
@@ -938,6 +982,8 @@ namespace MediaHarbor
                     this.Invoke(new Action(() =>
                     {
                         richTextBox4.AppendText(e.Data + Environment.NewLine);
+                        richTextBox2.SelectionStart = richTextBox2.Text.Length;
+                        richTextBox2.ScrollToCaret();
                     }));
                 }
             };
