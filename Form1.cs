@@ -29,17 +29,36 @@ namespace MediaHarbor
         public Form1()
         {
             InitializeComponent();
+            richTextBox1.ReadOnly = true;
+            richTextBox2.ReadOnly = true;
+            richTextBox3.ReadOnly = true;
+            // richTextBox1 için renk değişimi
+            richTextBox1.ForeColor = Color.Black;
+            richTextBox1.BackColor = Color.White;
+
+            // richTextBox4 için renk değişimi
+            richTextBox4.ForeColor = Color.Black;
+            richTextBox4.BackColor = Color.White;
+            // richTextBox2 için renk değişimi
+            richTextBox2.ForeColor = Color.Black;
+            richTextBox2.BackColor = Color.White;
+
+            // richTextBox3 için renk değişimi
+            richTextBox3.ForeColor = Color.Black;
+            richTextBox3.BackColor = Color.White;
+
+
             notifyIcon2.BalloonTipClicked += NotifyIcon2_BalloonTipClicked;
             MetroFramework.Components.MetroStyleManager styleManager = new MetroFramework.Components.MetroStyleManager();
             styleManager.Owner = this;
-
-            // Default renk temasını purple olarak ayarla
             styleManager.Style = MetroFramework.MetroColorStyle.Purple;
             styleManager.Theme = MetroFramework.MetroThemeStyle.Default;
             LoadSettings();
             ChangeLanguage(userLanguage);
             disneyAdet.Location = new System.Drawing.Point(metroLabel2.Right, disneyAdet.Top);
             metroTextBox1.Location = new System.Drawing.Point(metroLabel3.Right, metroTextBox1.Top);
+            comboBox2.Items.AddRange(new object[] { "Light", "Dark" });
+            comboBox2.SelectedIndexChanged += ComboBox2_SelectedIndexChanged;
         }
         private string downloadLocationText, downloadText, folderNotFoundText, howManyText, movieText, playlistText, processCompleteText, saveLocationText, seriesText, shutdownPCText, startText, openText, error, selectFolderText, downloads, noUpdate;
         private string alreadyUpdatedText, ytdlpUpdate, updatingPleaseWait, updateError, updateCompleted, updateCompletedMessage, selectDownloadLocationText, inputCorrectint, movieseriesaudioformat, movieseriesvideoformat, movieserieskeyformat;
@@ -47,6 +66,13 @@ namespace MediaHarbor
         private string autoUpdateText;
         private bool isAdminMode = false;
 
+
+        private void ComboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // ComboBox'ın seçili öğesine göre tema ayarını değiştir
+            string selectedTheme = comboBox2.SelectedItem.ToString();
+            SetTheme(selectedTheme);
+        }
         private void metroCheckBox1_CheckedChanged(object sender, EventArgs e)
         {
             if (metroCheckBox1.Checked)
@@ -474,7 +500,63 @@ namespace MediaHarbor
 
         }
 
-        
+        private void SetTheme(string theme)
+        {
+            if (theme == "Light")
+            {
+                // richTextBox1 için renk değişimi
+                richTextBox1.ForeColor = Color.Black;
+                richTextBox1.BackColor = Color.White;
+
+                // richTextBox4 için renk değişimi
+                richTextBox4.ForeColor = Color.Black;
+                richTextBox4.BackColor = Color.White;
+                // richTextBox2 için renk değişimi
+                richTextBox2.ForeColor = Color.Black;
+                richTextBox2.BackColor = Color.White;
+
+                // richTextBox3 için renk değişimi
+                richTextBox3.ForeColor = Color.Black;
+                richTextBox3.BackColor = Color.White;
+
+
+                comboBox2.ForeColor = Color.Black;
+                comboBox2.BackColor = Color.White;
+
+                comboBox1.ForeColor = Color.Black;
+                comboBox1.BackColor = Color.White;
+
+                this.Theme = MetroThemeStyle.Light;
+                metroStyleManager1.Theme = MetroFramework.MetroThemeStyle.Light;
+                metroStyleManager1.Style = MetroFramework.MetroColorStyle.Purple; 
+            }
+            else if (theme == "Dark")
+            {
+                richTextBox1.ForeColor = Color.FromArgb(153, 153, 153);
+                richTextBox1.BackColor = Color.FromArgb(17, 17, 17);
+
+                richTextBox4.ForeColor = Color.FromArgb(153, 153, 153);
+                richTextBox4.BackColor = Color.FromArgb(17, 17, 17);
+                richTextBox3.ForeColor = Color.FromArgb(153, 153, 153);
+                richTextBox3.BackColor = Color.FromArgb(17, 17, 17);
+
+                richTextBox2.ForeColor = Color.FromArgb(153, 153, 153);
+                richTextBox2.BackColor = Color.FromArgb(17, 17, 17);
+
+                comboBox2.ForeColor = Color.FromArgb(153, 153, 153);
+                comboBox2.BackColor = Color.FromArgb(17, 17, 17);
+
+                comboBox1.ForeColor = Color.FromArgb(153, 153, 153);
+                comboBox1.BackColor = Color.FromArgb(17, 17, 17);
+
+                this.Theme = MetroThemeStyle.Dark;
+                metroStyleManager1.Theme = MetroFramework.MetroThemeStyle.Dark;
+                metroStyleManager1.Style = MetroFramework.MetroColorStyle.Purple;
+            }
+
+
+        }
+
         private void SaveSettings()
         {
             // İndirme konumu ve toggle ayarlarını kaydet
@@ -772,6 +854,8 @@ namespace MediaHarbor
                     this.Invoke(new Action(() =>
                     {
                         richTextBox2.AppendText(e.Data + Environment.NewLine);
+                        richTextBox2.SelectionStart = richTextBox2.Text.Length;
+                        richTextBox2.ScrollToCaret();
                     }));
                 }
             };
@@ -817,6 +901,8 @@ namespace MediaHarbor
                     this.Invoke(new Action(() =>
                     {
                         richTextBox2.AppendText(e.Data + Environment.NewLine);
+                        richTextBox2.SelectionStart = richTextBox2.Text.Length;
+                        richTextBox2.ScrollToCaret();
                     }));
                 }
             };
@@ -861,6 +947,8 @@ namespace MediaHarbor
                     this.Invoke(new Action(() =>
                     {
                         richTextBox2.AppendText(e.Data + Environment.NewLine);
+                        richTextBox2.SelectionStart = richTextBox2.Text.Length;
+                        richTextBox2.ScrollToCaret();
                     }));
                 }
             };
@@ -906,6 +994,8 @@ namespace MediaHarbor
                     this.Invoke(new Action(() =>
                     {
                         richTextBox2.AppendText(e.Data + Environment.NewLine);
+                        richTextBox2.SelectionStart = richTextBox2.Text.Length;
+                        richTextBox2.ScrollToCaret();
                     }));
                 }
             };
@@ -948,6 +1038,8 @@ namespace MediaHarbor
                     this.Invoke(new Action(() =>
                     {
                         richTextBox4.AppendText(e.Data + Environment.NewLine);
+                        richTextBox2.SelectionStart = richTextBox2.Text.Length;
+                        richTextBox2.ScrollToCaret();
                     }));
                 }
             };

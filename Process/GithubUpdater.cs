@@ -53,11 +53,12 @@ namespace MediaHarbor
                             if (latest > current)
                             {
                                 // Yeni sürüm mevcut, bildirim göster.
-                                ShowNotificationUpdate(updateNotification, $"{newUpdateText} {latestVersion}");
+                                ShowNotification(updateNotification, $"{newUpdateText} {latestVersion}");
+                                
                             }
                             else
                             {
-                              // ShowNotification(noUpdateMessage, noUpdateText);
+                              ShowNotificationNoUpdate(noUpdateMessage, noUpdateText);
                             }
                         }
                     }
@@ -72,27 +73,7 @@ namespace MediaHarbor
                 }
             }
         }
-        private static void ShowNotificationUpdate(string title, string message)
-        {
-            NotifyIcon notifyIcon = new NotifyIcon();
-            notifyIcon.Visible = true;
-            notifyIcon.Icon = SystemIcons.Warning;
-            notifyIcon.BalloonTipTitle = title;
-            notifyIcon.BalloonTipText = message;
-            notifyIcon.ShowBalloonTip(5000); // Bildirimi 5 saniye boyunca göster
 
-            // Bildirim simgesine tıklandığında olayı dinle
-            notifyIcon.MouseClick += NotifyIcon_MouseClick;
-        }
-
-        private static void NotifyIcon_MouseClick(object sender, MouseEventArgs e)
-        {
-            // Tıklandığında GitHub linkine yönlendir
-            if (e.Button == MouseButtons.Left)
-            {
-                System.Diagnostics.Process.Start("https://github.com/CrossyAtom46/MediaHarbor/releases/latest");
-            }
-        }
         private static void ShowNotification(string title, string message)
         {
             NotifyIcon notifyIcon = new NotifyIcon();
@@ -101,7 +82,26 @@ namespace MediaHarbor
             notifyIcon.BalloonTipTitle = title;
             notifyIcon.BalloonTipText = message;
             notifyIcon.ShowBalloonTip(5000); // Bildirimi 5 saniye boyunca göster
-            notifyIcon.Visible = false;
+            notifyIcon.Dispose();
+            notifyIcon.MouseClick += NotifyIcon_MouseClick;
+        }
+        private static void NotifyIcon_MouseClick(object sender, MouseEventArgs e)
+        {
+            // Tıklandığında GitHub linkine yönlendir
+            if (e.Button == MouseButtons.Left)
+            {
+                System.Diagnostics.Process.Start("https://github.com/CrossyAtom46/MediaHarbor/releases/latest");
+            }
+        }
+        private static void ShowNotificationNoUpdate(string title, string message)
+        {
+            NotifyIcon notifyIcon = new NotifyIcon();
+            notifyIcon.Visible = true;
+            notifyIcon.Icon = SystemIcons.Warning;
+            notifyIcon.BalloonTipTitle = title;
+            notifyIcon.BalloonTipText = message;
+            notifyIcon.ShowBalloonTip(5000); // Bildirimi 5 saniye boyunca göster
+            notifyIcon.Dispose();
         }
     }
 }
