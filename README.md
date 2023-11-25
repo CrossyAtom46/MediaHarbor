@@ -3,6 +3,13 @@
 [English](#mediaharbor-english) | 
 [Türkçe](#mediaharbor-türkçe)
 
+## Screenshots
+### Light Theme
+<img src="https://github.com/CrossyAtom46/MediaHarbor/assets/82151617/b49d7a9f-d98b-4007-a301-8e211d3a3fe6" width="500" /> <img src="https://github.com/CrossyAtom46/MediaHarbor/assets/82151617/468bfb6f-3bd7-4bf9-b246-b1a9e7d5f1b7" width="500" />
+### Dark Theme
+<img src="https://github.com/CrossyAtom46/MediaHarbor/assets/82151617/8b67a2cd-d1be-4f1c-a3bb-c523bba103b8" width="500" /> <img src="https://github.com/CrossyAtom46/MediaHarbor/assets/82151617/44379fc5-7a0b-47e8-8545-963e1cda8929" width="500" />
+
+
 
 ## MediaHarbor (English)
 Mediaharbor is a media downloading application that provides a user-friendly interface for MediaHarbor, YT-DLP, and N_m3u8DL-CLI. This app is designed to facilitate the processes of downloading media content from various platforms.
@@ -53,6 +60,15 @@ Follow these steps to get video keys from platforms like Disney+. Please use the
 
 ## MediaHarbor (Türkçe)
 MediaHarbor, YT-DLP ve N_m3u8DL-CLI için kullanıcı dostu bir arayüz sağlayan bir medya indirme uygulamasıdır. Bu uygulama, çeşitli platformlardan medya içeriği indirme işlemlerini kolaylaştırmak için tasarlanmıştır.
+
+## Resimler
+
+### Beyaz Tema
+<img src="https://github.com/CrossyAtom46/MediaHarbor/assets/82151617/a6aea271-ae4c-4700-8d8b-35fbc0a5a072" width="500" /> <img src="https://github.com/CrossyAtom46/MediaHarbor/assets/82151617/3ca5f031-6295-440c-bc3e-381747e0ff43" width="500" />
+
+### Siyah Tema
+<img src="https://github.com/CrossyAtom46/MediaHarbor/assets/82151617/39d74b25-a3ed-4173-832e-d7b9db80eae5" width="500" /> <img src="https://github.com/CrossyAtom46/MediaHarbor/assets/82151617/bfeaa48e-6ab5-4d0f-b679-d2d5988d31c7" width="500" />
+
 
 ## Özellikler
 
