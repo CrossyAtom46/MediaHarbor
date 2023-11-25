@@ -497,9 +497,65 @@ namespace MediaHarbor
 
             ffmpegPath = Path.Combine(Application.StartupPath, "ffmpeg.exe");
             comboBox1.Hide();
-            
+
         }
 
+        private void SetTheme(string theme)
+        {
+            if (theme == "Light")
+            {
+                // richTextBox1 için renk değişimi
+                richTextBox1.ForeColor = Color.Black;
+                richTextBox1.BackColor = Color.White;
+
+                // richTextBox4 için renk değişimi
+                richTextBox4.ForeColor = Color.Black;
+                richTextBox4.BackColor = Color.White;
+                // richTextBox2 için renk değişimi
+                richTextBox2.ForeColor = Color.Black;
+                richTextBox2.BackColor = Color.White;
+
+                // richTextBox3 için renk değişimi
+                richTextBox3.ForeColor = Color.Black;
+                richTextBox3.BackColor = Color.White;
+
+
+                comboBox2.ForeColor = Color.Black;
+                comboBox2.BackColor = Color.White;
+
+                comboBox1.ForeColor = Color.Black;
+                comboBox1.BackColor = Color.White;
+
+                this.Theme = MetroThemeStyle.Light;
+                metroStyleManager1.Theme = MetroFramework.MetroThemeStyle.Light;
+                metroStyleManager1.Style = MetroFramework.MetroColorStyle.Purple;
+            }
+            else if (theme == "Dark")
+            {
+                richTextBox1.ForeColor = Color.FromArgb(153, 153, 153);
+                richTextBox1.BackColor = Color.FromArgb(17, 17, 17);
+
+                richTextBox4.ForeColor = Color.FromArgb(153, 153, 153);
+                richTextBox4.BackColor = Color.FromArgb(17, 17, 17);
+                richTextBox3.ForeColor = Color.FromArgb(153, 153, 153);
+                richTextBox3.BackColor = Color.FromArgb(17, 17, 17);
+
+                richTextBox2.ForeColor = Color.FromArgb(153, 153, 153);
+                richTextBox2.BackColor = Color.FromArgb(17, 17, 17);
+
+                comboBox2.ForeColor = Color.FromArgb(153, 153, 153);
+                comboBox2.BackColor = Color.FromArgb(17, 17, 17);
+
+                comboBox1.ForeColor = Color.FromArgb(153, 153, 153);
+                comboBox1.BackColor = Color.FromArgb(17, 17, 17);
+
+                this.Theme = MetroThemeStyle.Dark;
+                metroStyleManager1.Theme = MetroFramework.MetroThemeStyle.Dark;
+                metroStyleManager1.Style = MetroFramework.MetroColorStyle.Purple;
+            }
+
+
+        }
 
         private void SaveSettings()
         {
@@ -513,7 +569,7 @@ namespace MediaHarbor
             Properties.Settings.Default.Save();
         }
 
-        
+
 
         private void metroButton1_Click(object sender, EventArgs e)
         {
@@ -615,7 +671,7 @@ namespace MediaHarbor
                     ProcessNotification(downloadcompleteText, processCompleteText);
                 }
             }
-            
+
 
         }
 
@@ -656,7 +712,7 @@ namespace MediaHarbor
                     string decryptedFilePath = Path.Combine(downloadDir2, $"{userInput}.mp3");
                     await DecryptAndConvertAsync(downloadPath, key, decryptedFilePath);
 
-                   ProcessNotification(downloadcompleteText, downloadCompleteMessage);
+                    ProcessNotification(downloadcompleteText, downloadCompleteMessage);
                 }
                 else
                 {
@@ -768,9 +824,9 @@ namespace MediaHarbor
                         MessageBox.Show(doformatselectionText);
                     }
                 }
-                
+
             }
-            
+
         }
         private async void DownloadAudio()
         {
@@ -860,9 +916,9 @@ namespace MediaHarbor
             richTextBox2.Text = processCompleteText;
 
             ProcessNotification(downloadcompleteText, processCompleteText);
-            if (metroCheckBox1.Checked==true) { Process.Start("shutdown.exe, /s /t 1"); }
+            if (metroCheckBox1.Checked == true) { Process.Start("shutdown.exe, /s /t 1"); }
         }
-        
+
 
 
         private async void DownloadAudioPlaylist()
@@ -897,7 +953,7 @@ namespace MediaHarbor
                 }
             };
 
-            
+
             process.Start();
             process.BeginOutputReadLine();
 
@@ -1010,7 +1066,7 @@ namespace MediaHarbor
             comboBox1.Hide();
         }
 
-        
+
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
