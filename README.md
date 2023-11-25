@@ -5,9 +5,9 @@
 
 ## Screenshots
 ### Light Theme
-<img src="https://github.com/CrossyAtom46/MediaHarbor/assets/82151617/b49d7a9f-d98b-4007-a301-8e211d3a3fe6" width="500" /> <img src="https://github.com/CrossyAtom46/MediaHarbor/assets/82151617/468bfb6f-3bd7-4bf9-b246-b1a9e7d5f1b7" width="500" />
+<img src="https://github.com/CrossyAtom46/MediaHarbor/assets/82151617/b49d7a9f-d98b-4007-a301-8e211d3a3fe6" width="450" /> <img src="https://github.com/CrossyAtom46/MediaHarbor/assets/82151617/468bfb6f-3bd7-4bf9-b246-b1a9e7d5f1b7" width="450" />
 ### Dark Theme
-<img src="https://github.com/CrossyAtom46/MediaHarbor/assets/82151617/8b67a2cd-d1be-4f1c-a3bb-c523bba103b8" width="500" /> <img src="https://github.com/CrossyAtom46/MediaHarbor/assets/82151617/44379fc5-7a0b-47e8-8545-963e1cda8929" width="500" />
+<img src="https://github.com/CrossyAtom46/MediaHarbor/assets/82151617/8b67a2cd-d1be-4f1c-a3bb-c523bba103b8" width="450" /> <img src="https://github.com/CrossyAtom46/MediaHarbor/assets/82151617/44379fc5-7a0b-47e8-8545-963e1cda8929" width="450" />
 
 
 
