@@ -254,6 +254,9 @@ Use the "General" tab to download media content from platforms like YouTube, Vim
   <data name="selectFolderText" xml:space="preserve">
     <value>Select Folder</value>
   </data>
+  <data name="selectQuality" xml:space="preserve">
+    <value>Select an Quality First!</value>
+  </data>
   <data name="seriesname" xml:space="preserve">
     <value>Series Name:</value>
   </data>

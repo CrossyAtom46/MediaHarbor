@@ -57,7 +57,8 @@
     <ManifestCertificateThumbprint>8930AD28A02D37A0AA98DACB825BAC5A5C9D8610</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>MediaHarbor_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>
+    </ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>
@@ -95,16 +96,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AlwaysOnTopMessage.cs">
+    <Compile Include="Classes\AlwaysOnTopMessage.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Classes\LanguageSwitcher.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="GithubUpdater.cs" />
+    <Compile Include="Classes\GithubUpdater.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">

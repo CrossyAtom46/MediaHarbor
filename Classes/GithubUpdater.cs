@@ -11,7 +11,7 @@ namespace MediaHarbor
     {
         private const string Owner = "CrossyAtom46";
         private const string Repo = "MediaHarbor";
-        private const string CurrentVersion = "1.1.2";
+        private const string CurrentVersion = "1.1.3";
 
         public static async Task CheckForUpdates(string currentCulture)
         {
@@ -52,7 +52,7 @@ namespace MediaHarbor
                         {
                             if (latest > current)
                             {
-                                // Yeni sürüm mevcut, bildirim göster.
+                                ShowNotificationUpdate(updateNotification, newUpdateText);
                             }
                             else
                             {

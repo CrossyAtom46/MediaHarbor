@@ -70,11 +70,20 @@ namespace MediaHarbor.Properties {
         }
         
         /// <summary>
-        ///    benzeri yerelleştirilmiş bir dize arar.
+        ///   App Theme benzeri yerelleştirilmiş bir dize arar.
         /// </summary>
-        public static string asd {
+        public static string appTheme {
             get {
-                return ResourceManager.GetString("asd", resourceCulture);
+                return ResourceManager.GetString("appTheme", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Dark Theme benzeri yerelleştirilmiş bir dize arar.
+        /// </summary>
+        public static string darkTheme {
+            get {
+                return ResourceManager.GetString("darkTheme", resourceCulture);
             }
         }
         
@@ -237,6 +246,15 @@ namespace MediaHarbor.Properties {
         public static string inputcorrectint {
             get {
                 return ResourceManager.GetString("inputcorrectint", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Light Theme benzeri yerelleştirilmiş bir dize arar.
+        /// </summary>
+        public static string lightTheme {
+            get {
+                return ResourceManager.GetString("lightTheme", resourceCulture);
             }
         }
         
@@ -411,6 +429,15 @@ namespace MediaHarbor.Properties {
         public static string selectFolderText {
             get {
                 return ResourceManager.GetString("selectFolderText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Select an Quality First! benzeri yerelleştirilmiş bir dize arar.
+        /// </summary>
+        public static string selectQuality {
+            get {
+                return ResourceManager.GetString("selectQuality", resourceCulture);
             }
         }
         

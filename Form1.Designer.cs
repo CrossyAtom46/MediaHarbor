@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
             this.metroTabPage6 = new MetroFramework.Controls.MetroTabPage();
+            this.button1 = new MetroFramework.Controls.MetroButton();
             this.metroCheckBox2 = new MetroFramework.Controls.MetroCheckBox();
             this.metroButton3 = new MetroFramework.Controls.MetroButton();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
@@ -42,6 +43,7 @@
             this.metroRadioButton3 = new MetroFramework.Controls.MetroRadioButton();
             this.metroTextBox2 = new MetroFramework.Controls.MetroTextBox();
             this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
+            this.button2 = new MetroFramework.Controls.MetroButton();
             this.richTextBox4 = new System.Windows.Forms.RichTextBox();
             this.metroButton4 = new MetroFramework.Controls.MetroButton();
             this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
@@ -61,6 +63,8 @@
             this.metroTabPage5 = new MetroFramework.Controls.MetroTabPage();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.metroTabPage4 = new MetroFramework.Controls.MetroTabPage();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
             this.metroToggle1 = new MetroFramework.Controls.MetroToggle();
             this.metroCheckBox1 = new MetroFramework.Controls.MetroCheckBox();
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
@@ -70,10 +74,6 @@
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.metroStyleManager1 = new MetroFramework.Components.MetroStyleManager(this.components);
             this.notifyIcon2 = new System.Windows.Forms.NotifyIcon(this.components);
-            this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.button1 = new MetroFramework.Controls.MetroButton();
-            this.button2 = new MetroFramework.Controls.MetroButton();
             this.metroTabControl1.SuspendLayout();
             this.metroTabPage6.SuspendLayout();
             this.metroTabPage2.SuspendLayout();
@@ -124,6 +124,17 @@
             this.metroTabPage6.VerticalScrollbarBarColor = true;
             this.metroTabPage6.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage6.VerticalScrollbarSize = 10;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(4, 76);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(159, 23);
+            this.button1.Style = MetroFramework.MetroColorStyle.Purple;
+            this.button1.TabIndex = 1;
+            this.button1.Text = "İndir";
+            this.button1.UseSelectable = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // metroCheckBox2
             // 
@@ -176,7 +187,8 @@
             "480p",
             "720p",
             "1080p",
-            "1440p"});
+            "1440p",
+            "2160p"});
             this.comboBox1.Location = new System.Drawing.Point(407, 27);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
@@ -187,7 +199,7 @@
             // 
             this.richTextBox2.Location = new System.Drawing.Point(4, 108);
             this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(572, 94);
+            this.richTextBox2.Size = new System.Drawing.Size(565, 94);
             this.richTextBox2.TabIndex = 6;
             this.richTextBox2.Text = "";
             // 
@@ -262,6 +274,16 @@
             this.metroTabPage2.VerticalScrollbarBarColor = true;
             this.metroTabPage2.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage2.VerticalScrollbarSize = 10;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(405, 16);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(149, 23);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "İndir";
+            this.button2.UseSelectable = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // richTextBox4
             // 
@@ -538,6 +560,25 @@
             this.metroTabPage4.VerticalScrollbarSize = 10;
             this.metroTabPage4.Click += new System.EventHandler(this.metroTabPage4_Click);
             // 
+            // comboBox2
+            // 
+            this.comboBox2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(3, 90);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(121, 25);
+            this.comboBox2.TabIndex = 9;
+            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.ComboBox2_SelectedIndexChanged);
+            // 
+            // metroLabel9
+            // 
+            this.metroLabel9.AutoSize = true;
+            this.metroLabel9.Location = new System.Drawing.Point(3, 68);
+            this.metroLabel9.Name = "metroLabel9";
+            this.metroLabel9.Size = new System.Drawing.Size(111, 19);
+            this.metroLabel9.TabIndex = 8;
+            this.metroLabel9.Text = "Uygulama Teması";
+            // 
             // metroToggle1
             // 
             this.metroToggle1.AutoSize = true;
@@ -640,45 +681,6 @@
             // 
             this.notifyIcon2.Text = "notifyIcon2";
             this.notifyIcon2.Visible = true;
-            // 
-            // metroLabel9
-            // 
-            this.metroLabel9.AutoSize = true;
-            this.metroLabel9.Location = new System.Drawing.Point(3, 68);
-            this.metroLabel9.Name = "metroLabel9";
-            this.metroLabel9.Size = new System.Drawing.Size(111, 19);
-            this.metroLabel9.TabIndex = 8;
-            this.metroLabel9.Text = "Uygulama Teması";
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(3, 90);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 25);
-            this.comboBox2.TabIndex = 9;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(4, 76);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(159, 23);
-            this.button1.Style = MetroFramework.MetroColorStyle.Purple;
-            this.button1.TabIndex = 1;
-            this.button1.Text = "İndir";
-            this.button1.UseSelectable = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(405, 16);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(149, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "İndir";
-            this.button2.UseSelectable = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Form1
             // 
