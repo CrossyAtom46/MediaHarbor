@@ -11,7 +11,7 @@ namespace MediaHarbor
     {
         private const string Owner = "CrossyAtom46";
         private const string Repo = "MediaHarbor";
-        private const string CurrentVersion = "1.1.2";
+        private const string CurrentVersion = "1.1.3";
 
         public static async Task CheckForUpdates(string currentCulture)
         {
@@ -52,11 +52,12 @@ namespace MediaHarbor
                         {
                             if (latest > current)
                             {
-                                // Yeni sürüm mevcut, bildirim göster.
+                                string newUpdateTextWithVersion = $"{newUpdateText} {latestVersion}";
+                                ShowNotificationUpdate(updateNotification, newUpdateTextWithVersion);
                             }
                             else
                             {
-                              // ShowNotification(noUpdateMessage, noUpdateText);
+                                // ShowNotification(noUpdateMessage, noUpdateText);
                             }
                         }
                     }
@@ -71,6 +72,7 @@ namespace MediaHarbor
                 }
             }
         }
+
         private static void ShowNotificationUpdate(string title, string message)
         {
             NotifyIcon notifyIcon = new NotifyIcon();
@@ -82,6 +84,8 @@ namespace MediaHarbor
 
             // Bildirim simgesine tıklandığında olayı dinle
             notifyIcon.MouseClick += NotifyIcon_MouseClick;
+
+            notifyIcon.Dispose();
         }
 
         private static void NotifyIcon_MouseClick(object sender, MouseEventArgs e)
@@ -92,6 +96,7 @@ namespace MediaHarbor
                 System.Diagnostics.Process.Start("https://github.com/CrossyAtom46/MediaHarbor/releases/latest");
             }
         }
+
         private static void ShowNotification(string title, string message)
         {
             NotifyIcon notifyIcon = new NotifyIcon();
@@ -100,7 +105,7 @@ namespace MediaHarbor
             notifyIcon.BalloonTipTitle = title;
             notifyIcon.BalloonTipText = message;
             notifyIcon.ShowBalloonTip(5000); // Bildirimi 5 saniye boyunca göster
-            notifyIcon.Visible = false;
+            notifyIcon.Dispose();
         }
     }
 }

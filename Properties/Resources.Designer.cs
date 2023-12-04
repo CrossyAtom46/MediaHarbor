@@ -70,11 +70,29 @@ namespace MediaHarbor.Properties {
         }
         
         /// <summary>
-        ///    benzeri yerelleştirilmiş bir dize arar.
+        ///   App Theme benzeri yerelleştirilmiş bir dize arar.
         /// </summary>
-        public static string asd {
+        public static string appTheme {
             get {
-                return ResourceManager.GetString("asd", resourceCulture);
+                return ResourceManager.GetString("appTheme", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Copy URL benzeri yerelleştirilmiş bir dize arar.
+        /// </summary>
+        public static string copyURL {
+            get {
+                return ResourceManager.GetString("copyURL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Dark Theme benzeri yerelleştirilmiş bir dize arar.
+        /// </summary>
+        public static string darkTheme {
+            get {
+                return ResourceManager.GetString("darkTheme", resourceCulture);
             }
         }
         
@@ -241,6 +259,15 @@ namespace MediaHarbor.Properties {
         }
         
         /// <summary>
+        ///   Light Theme benzeri yerelleştirilmiş bir dize arar.
+        /// </summary>
+        public static string lightTheme {
+            get {
+                return ResourceManager.GetString("lightTheme", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Movie Completed benzeri yerelleştirilmiş bir dize arar.
         /// </summary>
         public static string moviecompleted {
@@ -388,6 +415,15 @@ namespace MediaHarbor.Properties {
         }
         
         /// <summary>
+        ///   Search benzeri yerelleştirilmiş bir dize arar.
+        /// </summary>
+        public static string searchText {
+            get {
+                return ResourceManager.GetString("searchText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Please Select Download Location First! benzeri yerelleştirilmiş bir dize arar.
         /// </summary>
         public static string selectDownloadLocationText {
@@ -411,6 +447,15 @@ namespace MediaHarbor.Properties {
         public static string selectFolderText {
             get {
                 return ResourceManager.GetString("selectFolderText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Select an Quality First! benzeri yerelleştirilmiş bir dize arar.
+        /// </summary>
+        public static string selectQuality {
+            get {
+                return ResourceManager.GetString("selectQuality", resourceCulture);
             }
         }
         
@@ -537,6 +582,15 @@ namespace MediaHarbor.Properties {
         public static string updatingPleaseWait {
             get {
                 return ResourceManager.GetString("updatingPleaseWait", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   YouTube Search benzeri yerelleştirilmiş bir dize arar.
+        /// </summary>
+        public static string youtubeSearch {
+            get {
+                return ResourceManager.GetString("youtubeSearch", resourceCulture);
             }
         }
         

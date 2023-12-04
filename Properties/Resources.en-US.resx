@@ -120,6 +120,9 @@
   <data name="alreadyupdatedText" xml:space="preserve">
     <value>yt-dlp.exe Already Updated.</value>
   </data>
+  <data name="copyURL" xml:space="preserve">
+    <value>Copy URL</value>
+  </data>
   <data name="doformatselectionText" xml:space="preserve">
     <value>Please Make Format Selection.</value>
   </data>
@@ -245,6 +248,9 @@ Use the "General" tab to download media content from platforms like YouTube, Vim
   <data name="saveLocationText" xml:space="preserve">
     <value>Download Location</value>
   </data>
+  <data name="searchText" xml:space="preserve">
+    <value>Search</value>
+  </data>
   <data name="selectDownloadLocationText" xml:space="preserve">
     <value>Please Select Download Location First!</value>
   </data>
@@ -253,6 +259,9 @@ Use the "General" tab to download media content from platforms like YouTube, Vim
   </data>
   <data name="selectFolderText" xml:space="preserve">
     <value>Select Folder</value>
+  </data>
+  <data name="selectQuality" xml:space="preserve">
+    <value>Select an Quality First!</value>
   </data>
   <data name="seriesname" xml:space="preserve">
     <value>Series Name:</value>
@@ -295,6 +304,9 @@ Use the "General" tab to download media content from platforms like YouTube, Vim
   </data>
   <data name="updatingPleaseWait" xml:space="preserve">
     <value>Updating, Please Wait!</value>
+  </data>
+  <data name="youtubeSearch" xml:space="preserve">
+    <value>YouTube Search</value>
   </data>
   <data name="yt-dlpAutoUpdateText" xml:space="preserve">
     <value>Should yt-dlp update automatically?</value>
