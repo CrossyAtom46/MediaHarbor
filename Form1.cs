@@ -64,6 +64,8 @@ namespace MediaHarbor
             // richTextBox3 için renk değişimi
             richTextBox3.ForeColor = Color.Black;
             richTextBox3.BackColor = Color.White;
+            MP3Folder = $"\\MP3";
+            MP4Folder = $"\\MP4";
 
             MP3Folder = $"\\MP3";
             MP4Folder = $"\\MP4";
@@ -251,7 +253,7 @@ namespace MediaHarbor
                 metroButton2.Text = "İndir";
                 manager.SetCommonTranslations();
             }
-            else if (currentCulture == "en-US")
+            else if (currentCulture == "tr-TR")
             {
                 searchButton.Text = manager.searchText;
                 metroLabel9.Text = manager.appTheme;
@@ -288,10 +290,25 @@ namespace MediaHarbor
 
                 
 
+                movieText = metroRadioButton1.Text;
+                seriesText = metroRadioButton2.Text;
+                metroLabel1.Text = downloadLocationText;
+                metroLabel3.Text = howManyText;
+
+                manager.SetCommonTranslations();
+
+                
+
             }
             else
             {
                 
+                movieText = metroRadioButton1.Text;
+                seriesText = metroRadioButton2.Text;
+                metroLabel1.Text = downloadLocationText;
+                metroLabel3.Text = howManyText;
+
+                manager.SetCommonTranslations();
             }
 
 
@@ -611,7 +628,7 @@ namespace MediaHarbor
 
         }
 
-        private async Task DecryptAndConvertAsync(string videoPath, string key, string outputPath)
+        private void DecryptAndConvert(string videoPath, string key, string outputPath)
         {
             // mp4decrypt ile decrypt işlemi
             Process.Start("mp4decrypt.exe", $"--key {key} \"{videoPath}\" \"{outputPath}\"").WaitForExit();
@@ -646,7 +663,7 @@ namespace MediaHarbor
 
                     // mp4decrypt ve ffmpeg işlemleri
                     string decryptedFilePath = Path.Combine(downloadDir2, $"{userInput}.mp3");
-                    await DecryptAndConvertAsync(downloadPath, key, decryptedFilePath);
+                    DecryptAndConvert(downloadPath, key, decryptedFilePath);
 
                     ProcessNotification(manager.downloadcompleteText, manager.downloadCompleteMessage);
                 }
@@ -998,7 +1015,6 @@ namespace MediaHarbor
 
             process.Start();
             process.BeginOutputReadLine();
-
             await process.WaitForExitAsync();
 
             richTextBox2.Clear();

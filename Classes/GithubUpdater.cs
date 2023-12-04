@@ -11,7 +11,7 @@ namespace MediaHarbor
     {
         private const string Owner = "CrossyAtom46";
         private const string Repo = "MediaHarbor";
-        private const string CurrentVersion = "1.1.2";
+        private const string CurrentVersion = "1.2.1";
 
         public static async Task CheckForUpdates(string currentCulture)
         {
@@ -52,13 +52,12 @@ namespace MediaHarbor
                         {
                             if (latest > current)
                             {
-                                // Yeni sürüm mevcut, bildirim göster.
-                                ShowNotification(updateNotification, $"{newUpdateText} {latestVersion}");
-                                
+                                string newUpdateTextWithVersion = $"{newUpdateText} {latestVersion}";
+                                ShowNotificationUpdate(updateNotification, newUpdateTextWithVersion);
                             }
                             else
                             {
-                              ShowNotificationNoUpdate(noUpdateMessage, noUpdateText);
+                                // ShowNotification(noUpdateMessage, noUpdateText);
                             }
                         }
                     }
@@ -74,7 +73,7 @@ namespace MediaHarbor
             }
         }
 
-        private static void ShowNotification(string title, string message)
+        private static void ShowNotificationUpdate(string title, string message)
         {
             NotifyIcon notifyIcon = new NotifyIcon();
             notifyIcon.Visible = true;
@@ -82,9 +81,13 @@ namespace MediaHarbor
             notifyIcon.BalloonTipTitle = title;
             notifyIcon.BalloonTipText = message;
             notifyIcon.ShowBalloonTip(5000); // Bildirimi 5 saniye boyunca göster
-            notifyIcon.Dispose();
+
+            // Bildirim simgesine tıklandığında olayı dinle
             notifyIcon.MouseClick += NotifyIcon_MouseClick;
+
+            notifyIcon.Dispose();
         }
+
         private static void NotifyIcon_MouseClick(object sender, MouseEventArgs e)
         {
             // Tıklandığında GitHub linkine yönlendir
@@ -93,7 +96,8 @@ namespace MediaHarbor
                 System.Diagnostics.Process.Start("https://github.com/CrossyAtom46/MediaHarbor/releases/latest");
             }
         }
-        private static void ShowNotificationNoUpdate(string title, string message)
+
+        private static void ShowNotification(string title, string message)
         {
             NotifyIcon notifyIcon = new NotifyIcon();
             notifyIcon.Visible = true;

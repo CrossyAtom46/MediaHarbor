@@ -193,7 +193,8 @@
             "480p",
             "720p",
             "1080p",
-            "1440p"});
+            "1440p",
+            "2160p"});
             this.comboBox1.Location = new System.Drawing.Point(407, 27);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
@@ -204,7 +205,7 @@
             // 
             this.richTextBox2.Location = new System.Drawing.Point(4, 108);
             this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(572, 94);
+            this.richTextBox2.Size = new System.Drawing.Size(565, 94);
             this.richTextBox2.TabIndex = 6;
             this.richTextBox2.Text = "";
             // 
