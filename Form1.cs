@@ -586,7 +586,7 @@ namespace MediaHarbor
 
                     Process.Start(".\\m3u8dl.exe", $"--saveName {i}s --workDir \"{downloadDir2}\" \"{audioUrl}\"").WaitForExit();
                     Process.Start(".\\m3u8dl.exe", $"--saveName {i}v --workDir \"{downloadDir2}\" \"{videoUrl}\"").WaitForExit();
-                    Process.Start("mp4decrypt.exe", $"--key {key} \"{downloadDir2}\\{i}v.mp4\" \"{downloadDir2}\\out{i}.mp4\"").WaitForExit();
+                    Process.Start(".\\mp4decrypt.exe", $"--key {key} \"{downloadDir2}\\{i}v.mp4\" \"{downloadDir2}\\out{i}.mp4\"").WaitForExit();
 
                     string audioFile = Path.Combine(downloadDir2, $"{i}s.m4a");
                     string videoFile = Path.Combine(downloadDir2, $"out{i}.mp4");
@@ -631,11 +631,11 @@ namespace MediaHarbor
         private void DecryptAndConvert(string videoPath, string key, string outputPath)
         {
             // mp4decrypt ile decrypt işlemi
-            Process.Start("mp4decrypt.exe", $"--key {key} \"{videoPath}\" \"{outputPath}\"").WaitForExit();
+            Process.Start(".\\mp4decrypt.exe", $"--key {key} \"{videoPath}\" \"{outputPath}\"").WaitForExit();
 
             // ffmpeg ile MP3'e dönüştür
             string mp3FilePath = Path.ChangeExtension(outputPath, ".mp3");
-            Process.Start("ffmpeg", $"-i \"{outputPath}\" -codec:a libmp3lame -q:a 2 \"{mp3FilePath}\"").WaitForExit();
+            Process.Start(".\\ffmpeg", $"-i \"{outputPath}\" -codec:a libmp3lame -q:a 2 \"{mp3FilePath}\"").WaitForExit();
 
             // Decrypt işlemi sonrasında artık kullanmadığımız orijinal video dosyasını silelim
             File.Delete(outputPath);
