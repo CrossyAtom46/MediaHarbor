@@ -23,6 +23,9 @@ Mediaharbor is a media downloading application that provides a user-friendly int
 - spotDL integration for Spotify downloads
 - Feature to perform YouTube searches
 
+## Special Thanks To
+[spotDl](https://github.com/SpotDL)
+
 
 # Help: Getting Keys for Disney+ Accounts
 
